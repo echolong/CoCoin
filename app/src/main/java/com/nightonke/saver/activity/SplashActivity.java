@@ -13,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nightonke.saver.R;
-import com.nightonke.saver.model.CoCoin;
 import com.nightonke.saver.model.RecordManager;
 import com.nightonke.saver.util.CoCoinUtil;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -21,7 +20,6 @@ import com.tencent.bugly.crashreport.CrashReport;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.bmob.v3.Bmob;
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
 import io.codetail.widget.RevealFrameLayout;
@@ -157,7 +155,7 @@ public class SplashActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            Bmob.initialize(CoCoinApplication.getAppContext(), CoCoin.APPLICATION_ID);
+//            Bmob.initialize(CoCoinApplication.getAppContext(), CoCoin.APPLICATION_ID);
             CrashReport.initCrashReport(CoCoinApplication.getAppContext(), "900018935", false);
             RecordManager.getInstance(CoCoinApplication.getAppContext());
             CoCoinUtil.init(CoCoinApplication.getAppContext());
